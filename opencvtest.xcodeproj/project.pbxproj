@@ -52,7 +52,7 @@
 		586B18F12B30209C0079643C /* libopencv_flann.4.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 586B18C42B30209C0079643C /* libopencv_flann.4.8.0.dylib */; };
 		586B18F22B30209C0079643C /* libopencv_imgcodecs.4.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 586B18C52B30209C0079643C /* libopencv_imgcodecs.4.8.0.dylib */; };
 		586B18F32B30209C0079643C /* libopencv_imgproc.4.8.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 586B18C62B30209C0079643C /* libopencv_imgproc.4.8.0.dylib */; };
-		586B18F62B3022C80079643C /* 07_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 586B188C2B3020270079643C /* 07_01.cpp */; };
+		588F0B9E2B3054A0009A5D1F /* 07_02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 588F0B9D2B3054A0009A5D1F /* 07_02.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -119,6 +119,7 @@
 		586B18C42B30209C0079643C /* libopencv_flann.4.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_flann.4.8.0.dylib; sourceTree = "<group>"; };
 		586B18C52B30209C0079643C /* libopencv_imgcodecs.4.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgcodecs.4.8.0.dylib; sourceTree = "<group>"; };
 		586B18C62B30209C0079643C /* libopencv_imgproc.4.8.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libopencv_imgproc.4.8.0.dylib; sourceTree = "<group>"; };
+		588F0B9D2B3054A0009A5D1F /* 07_02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 07_02.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				586B188C2B3020270079643C /* 07_01.cpp */,
+				588F0B9D2B3054A0009A5D1F /* 07_02.cpp */,
 			);
 			path = opencvtest;
 			sourceTree = "<group>";
@@ -332,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586B18F62B3022C80079643C /* 07_01.cpp in Sources */,
+				588F0B9E2B3054A0009A5D1F /* 07_02.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

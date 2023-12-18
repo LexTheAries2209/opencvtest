@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  07_01.cpp
 //  opencvtest
 //
 //  Created by 吴坤城 on 12/18/23.
@@ -13,14 +13,18 @@ using namespace std;
 int main() {
     
     //图片
+    
     while(true) {
-        string image_path = "/Users/lex./Desktop/Picture.jpg";
-        Mat gray_img = imread(image_path, 1);
-        imshow("Picture", gray_img);
-        char c = waitKey(25);
-        if(c == 27) {
-            break;
-        }
+        Mat image = imread("Users/lex./Desktop/Picture.jpg");
+            if(img.empty()) { //找不到图片就结束
+                break;
+            }
+            imshow("Image", image);
+            char c = waitKey();
+            if(c == 27) { //ESC退出
+                destroyAllWindows();
+                return 0;
+            }
     }
     
     //视频
@@ -28,12 +32,12 @@ int main() {
         while(true) {
             Mat video;
             cap >> video;
-            if(video.empty()) {
+            if(video.empty()) { //找不到视频就结束
                 break;
             }
             imshow("Video", video);
-            char c = waitKey(17);
-            if(c == 27) {
+            char c = waitKey(25);
+            if(c == 27) { //ESC退出
                 break;
             }
         }
@@ -43,13 +47,13 @@ int main() {
         while(true) {
             Mat frame;
             camera >> frame;
-            flip(frame, frame, 1);
-            if(frame.empty()) {
+            flip(frame, frame, 1); //镜像视频
+            if(frame.empty()) { //捉不到画面就结束
                 break;
             }
             imshow("Camera", frame);
             char c = waitKey(1);
-            if(c == 27) {
+            if(c == 27) { //ESC退出
                 break;
             }
         }
