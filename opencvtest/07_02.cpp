@@ -36,17 +36,10 @@ int main() {
     GaussianBlur(grayImage, blurredImage, ksize, sigmaX, sigmaY);
 
     // 输出原始图像和处理后的图像
-    namedWindow("Original Image", WINDOW_AUTOSIZE); //输出原始图像
-    imshow("Original Image", image);
-
-    namedWindow("Gray Image", WINDOW_AUTOSIZE); //输出灰度图
-    imshow("Gray Image", grayImage);
-
-    namedWindow("Binary Image", WINDOW_AUTOSIZE); //输出二值化图像
-    imshow("Binary Image", binaryImage);
-
-    namedWindow("Blurred Image", WINDOW_AUTOSIZE); //输出马赛克图像
-    imshow("Blurred Image", blurredImage);
+    imshow("Original Image", image); //输出原始图像
+    imshow("Gray Image", grayImage); //输出灰度图
+    imshow("Binary Image", binaryImage); //输出二值化图像
+    imshow("Blurred Image", blurredImage); //输出马赛克图像
 
     //ESC 退出
     waitKey(0);
