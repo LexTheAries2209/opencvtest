@@ -11,8 +11,9 @@ using namespace cv;
 using namespace std;
 
 int main() {
+    
     // 读取图像
-    Mat image = imread("/Users/lex./Desktop/Picture.jpg"); // 替换为您的图像路径
+    Mat image = imread("/Users/lex./Desktop/Picture.jpg");
     if(image.empty()) {
         cout << "找不到图像！" << endl;
         return 1;
@@ -31,8 +32,8 @@ int main() {
     Mat blurredImage;
     Size ksize = Size(9, 9); // 高斯核大小
     double sigmaX = 2.5; // X方向的标准差
-    double sigmaY = 2.5; // Y方向的标准差
-    GaussianBlur(grayImage, blurredImage, ksize, sigmaX);
+    double sigmaY = 2.5; // Y方向标准差
+    GaussianBlur(grayImage, blurredImage, ksize, sigmaX, sigmaY);
 
     // 输出原始图像和处理后的图像
     namedWindow("Original Image", WINDOW_AUTOSIZE); //输出原始图像

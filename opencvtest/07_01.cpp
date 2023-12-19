@@ -15,11 +15,11 @@ int main() {
     //图片
     
     while(true) {
-        Mat image = imread("Users/lex./Desktop/Picture.jpg");
+        Mat img = imread("/Users/lex./Desktop/Picture.jpg");
             if(img.empty()) { //找不到图片就结束
                 break;
             }
-            imshow("Image", image);
+            imshow("Image", img);
             char c = waitKey();
             if(c == 27) { //ESC退出
                 destroyAllWindows();
