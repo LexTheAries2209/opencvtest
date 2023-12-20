@@ -20,9 +20,9 @@ void on_trackbar(int, void* userdata) {
     int brightness_value = getTrackbarPos("Brightness", window_name);
     int contrast_value = getTrackbarPos("Contrast", window_name);
 
-    // 转换对比度值到合适的范围
-    double con = contrast_value / 50.0; // con范围[1,3]
-    double bri = brightness_value - 100; // bri范围[-100,100]
+    // 初始化亮度与对比度
+    double con = 1.0 + (contrast_value - 50) / 50.0;
+    double bri = (brightness_value - 50) * 2.55;
 
     // 调整亮度和对比度
     src.convertTo(src, -1, con, bri);
@@ -43,15 +43,15 @@ int main() {
     string window_name = "Image";
     namedWindow(window_name, 1);
 
-    int brightness_value = 100; // 初始亮度值
-    int contrast_value = 100;   // 初始对比度值
+    int brightness_value = 50; // 初始亮度值
+    int contrast_value = 50;   // 初始对比度值
 
     // 存储图像和窗口名的用户数据
     pair<Mat*, string> userdata(&img, window_name);
 
     //生成滑动条
-    createTrackbar("Brightness", window_name, &brightness_value, 200, on_trackbar, &userdata);
-    createTrackbar("Contrast", window_name, &contrast_value, 300, on_trackbar, &userdata);
+    createTrackbar("Brightness", window_name, &brightness_value, 100, on_trackbar, &userdata);
+    createTrackbar("Contrast", window_name, &contrast_value, 100, on_trackbar, &userdata);
 
     // 初始化回调函数
     on_trackbar(0, &userdata);
